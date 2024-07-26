@@ -111,7 +111,7 @@ export const PlaceCard = ({
             ) : null}
             <CardMedia
               component="img"
-              height="140"
+              height="240"
               image={place?.imageURL || "https://thumbs.dreamstime.com/b/paris-eiffel-tower-river-seine-sunset-france-one-most-iconic-landmarks-107376702.jpg"}
               alt="green iguana"
             />
