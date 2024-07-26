@@ -121,10 +121,10 @@ export const PlaceCard = ({
               </Typography>
               <Chip label={<span style={{ fontSize: 16 }}>{place.transporte}</span>} />
               <Typography variant="body2" color="text.secondary">
-                Valor: {new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(Number(place.preco))}
+                Valor: {Number(place.preco) > 0 ? new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(Number(place.preco)) : "Grátis"}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Horários: {place.horarios}
+                Horários: {place.horarios ? place.horarios : "24h | Público"}
               </Typography>
             </CardContent>
             <CardActions disableSpacing>
